@@ -1,0 +1,10 @@
+{
+    "name": "@barnabasj/express",
+    "scripts": {
+        "build:debug": "ts-node-dev --inspect --inspect-brk -- @barnabasj/build/scripts/build.ts "
+    },
+    "devDependencies": {
+        "@barnabasj/build": "workspace:packages/build",
+        "ts-node-dev": "^1.1.6"
+    }
+}

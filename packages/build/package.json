@@ -1,0 +1,27 @@
+{
+    "name": "@barnabasj/build",
+    "main": "./src/index.ts",
+    "bin": "./src/index.ts",
+    "files": [
+        "./scripts"
+    ],
+    "scripts": {
+        "dev": "ts-node-dev ./src/express.ts"
+    },
+    "dependencies": {
+        "express": "^4.17.1",
+        "gendash": "workspace:packages/gendash",
+        "webpack": "^5.37.0",
+        "webpack-dev-middleware": "^4.2.0",
+        "webpack-hot-middleware": "^2.25.0",
+        "webpack-merge": "^5.7.3"
+    },
+    "devDependencies": {
+        "@types/express": "^4",
+        "@types/webpack-dev-middleware": "^4",
+        "@types/webpack-hot-middleware": "^2",
+        "@types/webpack-merge": "^5.0.0",
+        "ts-node-dev": "^1.1.6",
+        "typescript": "^4.2.4"
+    }
+}
