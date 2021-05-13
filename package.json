@@ -1,0 +1,7 @@
+{
+  "name": "ts-starter",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ]
+}
