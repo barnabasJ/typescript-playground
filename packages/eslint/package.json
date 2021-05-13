@@ -1,3 +1,17 @@
 {
-  "name": "@barnabasj/eslint"
+    "name": "@barnabasj/eslint-config",
+    "main": ".eslintrc.js",
+    "devDependencies": {
+        "@types/eslint": "^7",
+        "@types/eslint-plugin-prettier": "^3",
+        "@types/prettier": "^2",
+        "@typescript-eslint/eslint-plugin": "^4.23.0",
+        "@typescript-eslint/parser": "^4.23.0"
+    },
+    "dependencies": {
+        "eslint": "^7.26.0",
+        "eslint-plugin-prettier": "^3.4.0",
+        "eslint-plugin-react": "^7.23.2",
+        "prettier": "^2.3.0"
+    }
 }

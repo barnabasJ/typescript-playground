@@ -5,6 +5,7 @@
     "packages/*"
   ],
   "devDependencies": {
+    "@barnabasj/eslint-config": "workspace:packages/eslint",
     "@types/eslint": "^7",
     "@types/prettier": "^2",
     "eslint": "^7.26.0",
