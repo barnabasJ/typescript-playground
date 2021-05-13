@@ -1,6 +1,9 @@
 {
     "name": "@barnabasj/eslint-config",
     "main": ".eslintrc.js",
+    "files": [
+        "prettier"
+    ],
     "devDependencies": {
         "@types/eslint": "^7",
         "@types/eslint-plugin-prettier": "^3",
