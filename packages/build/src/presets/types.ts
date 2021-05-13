@@ -1,8 +1,10 @@
 import { Configuration } from 'webpack'
 
-import { Env } from '../webpack.config'
+import { Env } from '..'
+import { BabelPreset } from './webpack.babel'
 
 import { BasePreset } from './webpack.base'
+import { HTMLPluginPreset } from './webpack.html-plugin'
 
 /**
  * A Preset can either be just the name of the preset or
@@ -15,4 +17,4 @@ export type PresetFn<S = void> = (env: Env, options: S) => Configuration
 /**
  * Allows Typescript to check both the preset and its options
  */
-export type Presets = BasePreset
+export type Presets = 'pnp' | BasePreset | HTMLPluginPreset | BabelPreset

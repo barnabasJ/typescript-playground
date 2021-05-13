@@ -2,8 +2,7 @@ import { Configuration } from 'webpack'
 import { merge, map, takeAll, compact, concat } from 'gendash'
 
 import { Presets } from './presets/types'
-
-delete process.env.TS_NODE_PROJECT // needed to make sure other loaders don't use the tsconfig version from the environment
+import loadPresets from './presets'
 
 /**
  * The environment
@@ -24,7 +23,7 @@ export type Env = {
  * Presets that are both used on the server and client
  * can be added here
  */
-const defaultEnv: Env = {
+export const defaultEnv: Env = {
     mode: 'production',
     presets: ['base'],
     watch: false,
@@ -51,19 +50,19 @@ function config(
         presets: takeAll(
             compact(
                 concat(
-                    map(presets.split(','), (s) => s.trim() as Presets),
+                    map(presets?.split(',') || [], (s) => s.trim() as Presets),
                     defaultEnv.presets
                 )
             )
         ),
         watch: !!args.watch,
     })
-    const baseConfig: Configuration = {
-        module: {
-            rules: [],
-        },
-    }
-    return {}
+
+    return loadPresets(env)
 }
 
 export default config
+
+export * from './presets'
+export * from './presets/types'
+export * from 'webpack-merge'

@@ -1,7 +1,6 @@
 {
     "name": "@barnabasj/build",
     "main": "./src/index.ts",
-    "bin": "./src/index.ts",
     "files": [
         "./scripts"
     ],
@@ -9,17 +8,26 @@
         "dev": "ts-node-dev ./src/express.ts"
     },
     "dependencies": {
+        "@babel/core": "^7.14.2",
+        "@babel/preset-typescript": "^7.13.0",
+        "@types/webpack-dev-server": "^3.11.4",
+        "babel": "^6.23.0",
+        "babel-loader": "^8.2.2",
+        "commander": "^7.2.0",
         "express": "^4.17.1",
         "gendash": "workspace:packages/gendash",
+        "html-webpack-plugin": "^5.3.1",
+        "pnp-webpack-plugin": "^1.6.4",
         "webpack": "^5.37.0",
         "webpack-dev-middleware": "^4.2.0",
         "webpack-hot-middleware": "^2.25.0",
         "webpack-merge": "^5.7.3"
     },
     "devDependencies": {
+        "@types/babel__core": "^7",
         "@types/express": "^4",
         "@types/webpack-dev-middleware": "^4",
-        "@types/webpack-hot-middleware": "^2",
+        "@types/webpack-hot-middleware": "^2.25.4",
         "@types/webpack-merge": "^5.0.0",
         "ts-node-dev": "^1.1.6",
         "typescript": "^4.2.4"

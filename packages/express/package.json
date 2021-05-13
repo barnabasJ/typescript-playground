@@ -1,10 +1,22 @@
 {
     "name": "@barnabasj/express",
     "scripts": {
-        "build:debug": "ts-node-dev --inspect --inspect-brk -- @barnabasj/build/scripts/build.ts "
+        "build": "ts-node-dev -- @barnabasj/build/scripts/build.ts "
     },
     "devDependencies": {
+        "@babel/core": "^7.14.2",
         "@barnabasj/build": "workspace:packages/build",
-        "ts-node-dev": "^1.1.6"
+        "@types/babel__core": "^7",
+        "@types/webpack-hot-middleware": "^2.25.4",
+        "babel-loader": "^8.2.2",
+        "pnp-webpack-plugin": "^1.6.4",
+        "ts-node-dev": "^1.1.6",
+        "typescript": "^4.2.4",
+        "webpack": "^5.37.0",
+        "webpack-hot-middleware": "^2.25.0"
+    },
+    "dependencies": {
+        "@types/node": "^15.0.3",
+        "@types/webpack-dev-server": "^3.11.4"
     }
 }

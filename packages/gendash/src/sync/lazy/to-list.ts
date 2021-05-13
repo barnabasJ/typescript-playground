@@ -4,6 +4,6 @@ export function* toList<V>(
     const keys = Object.keys(collection)
     for (const key of keys) {
         console.log({ key, value: collection[key] })
-        yield [key, collection[key]]
+        yield [key, collection[key] as V]
     }
 }
