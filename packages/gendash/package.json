@@ -1,0 +1,7 @@
+{
+    "name": "gendash",
+    "main": "src/index.ts",
+    "devDependencies": {
+        "@types/node": "^15.0.3"
+    }
+}
