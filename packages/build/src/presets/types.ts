@@ -1,8 +1,7 @@
-import { Configuration } from 'webpack'
-
 import { Env } from '..'
-import { BabelPreset } from './webpack.babel'
+import { Configuration } from '../types'
 
+import { BabelPreset } from './webpack.babel'
 import { BasePreset } from './webpack.base'
 import { HTMLPluginPreset } from './webpack.html-plugin'
 

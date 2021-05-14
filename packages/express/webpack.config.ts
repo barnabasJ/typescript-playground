@@ -1,7 +1,14 @@
 import { resolve } from 'path'
 
-import { addPresets, Env, loadPresets, merge, PresetFn } from '@barnabasj/build'
-import { Configuration, HotModuleReplacementPlugin } from 'webpack'
+import {
+    addPresets,
+    Env,
+    loadPresets,
+    merge,
+    PresetFn,
+    Configuration,
+} from '@barnabasj/build'
+import { HotModuleReplacementPlugin } from 'webpack'
 
 export default function (env: Env) {
     return [clientConfig(env), merge({}, serverConfig(env))]
@@ -16,6 +23,7 @@ function clientConfig(env: Env): ReturnType<PresetFn> {
                     './src/client/index',
                 ],
             },
+            devServer: {},
             devtool: 'source-map',
             output: {
                 path: resolve(__dirname, './dist/client'),

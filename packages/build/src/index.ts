@@ -1,6 +1,6 @@
-import { Configuration } from 'webpack'
 import { merge, map, takeAll, compact, concat } from 'gendash'
 
+import { Configuration } from './types'
 import { Presets } from './presets/types'
 import loadPresets from './presets'
 
@@ -65,4 +65,5 @@ export default config
 
 export * from './presets'
 export * from './presets/types'
+export * from './types'
 export * from 'webpack-merge'
