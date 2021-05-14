@@ -378,6 +378,7 @@ __metadata:
     "@types/webpack-hot-middleware": ^2.25.4
     babel-loader: ^8.2.2
     pnp-webpack-plugin: ^1.6.4
+    source-map-loader: ^2.0.1
     ts-node-dev: ^1.1.6
     typescript: ^4.2.4
     webpack: ^5.37.0
@@ -1080,6 +1081,13 @@ __metadata:
   version: 4.2.2
   resolution: "@xtuc/long@npm:4.2.2"
   checksum: ec09a359f98e9f8c47bf6c965e73b520a1a65e93f1febf6472babc8b6b0b425a2084452be103da5be11aec8c502ecfa29400713d55ef774579d04f691db44a2d
+  languageName: node
+  linkType: hard
+
+"abab@npm:^2.0.5":
+  version: 2.0.5
+  resolution: "abab@npm:2.0.5"
+  checksum: a42b91bd9dd2451a3fc6996bc8953139904ff7b1a793719205041148da892337afc97ed0589ef2c44765c4da3d688eed145781db1623b611621d805294c367a3
   languageName: node
   linkType: hard
 
@@ -5426,6 +5434,26 @@ resolve@^2.0.0-next.3:
   version: 2.0.1
   resolution: "source-list-map@npm:2.0.1"
   checksum: d8d45f29987d00d995ccda308dcc78b710031a9958fdb5d26674d32220c952eb7a8562062638d91896628ae4eef30e1cd112a6a547563dfda0b013024c2a9bf7
+  languageName: node
+  linkType: hard
+
+"source-map-js@npm:^0.6.2":
+  version: 0.6.2
+  resolution: "source-map-js@npm:0.6.2"
+  checksum: 8e2f992cfbedb71286fa6f6e011e2fa756b7f4d944ea4b0f49e9ff6ea34ad0a17dc655f067fdddb32efa7b45000e8c59e47a2e875d91744c86a56329b5f58b32
+  languageName: node
+  linkType: hard
+
+"source-map-loader@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "source-map-loader@npm:2.0.1"
+  dependencies:
+    abab: ^2.0.5
+    iconv-lite: ^0.6.2
+    source-map-js: ^0.6.2
+  peerDependencies:
+    webpack: ^5.0.0
+  checksum: d3bf51ed491782eaca87b626d7abc8c1c98a062bbf58dfd362460f86192f7dcb6fd79dffb126e91b78f5cc9e718e00386a6849b742f7c8c1785fb4886fa65350
   languageName: node
   linkType: hard
 

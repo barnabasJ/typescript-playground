@@ -7,6 +7,6 @@ if (typeof m?.hot !== 'undefined') {
 debugger
 
 const headline = document.createElement('h1')
-headline.innerText = 'Wuhuuu!'
+headline.innerText = 'Wuhuuu!!'
 
 document.body.appendChild(headline)

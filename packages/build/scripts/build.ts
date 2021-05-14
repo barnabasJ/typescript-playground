@@ -1,10 +1,12 @@
 import { Command } from 'commander'
 import express from 'express'
 import { resolve } from 'path'
-import webpack, { Configuration } from 'webpack'
+import webpack from 'webpack'
+import { Configuration } from '../src/types'
 import webpackDevMiddleware from 'webpack-dev-middleware'
 import webpackHotMiddleware from 'webpack-hot-middleware'
 import { Env, defaultEnv } from '../src'
+import { merge } from 'gendash'
 
 const program = new Command()
 
@@ -37,16 +39,24 @@ const compiler = webpack(config)
 
 const server = express()
 
+const devServerConfig = Array.isArray(config)
+    ? config.map((c) => c.devServer).reduce((acc, c) => merge(acc, c))
+    : config.devServer
+
+console.log({ devServerConfig })
+
 server.use(
     webpackDevMiddleware(compiler, {
         writeToDisk: true,
-        publicPath: '/',
-        serverSideRender: true,
     })
 )
 server.use(
     webpackHotMiddleware(
-        compiler as unknown as Parameters<typeof webpackHotMiddleware>[0]
+        compiler as unknown as Parameters<typeof webpackHotMiddleware>[0],
+        {
+            log: (...args) => console.log(args),
+            path: '/__webpack_hmr',
+        }
     )
 )
 

@@ -17,20 +17,36 @@ export default function (env: Env) {
 function clientConfig(env: Env): ReturnType<PresetFn> {
     return merge<Configuration>(
         {
+            name: 'client',
             entry: {
                 main: [
-                    'webpack-hot-middleware/client?name=client',
+                    'webpack-hot-middleware/client?name=client&reload=false',
                     './src/client/index',
                 ],
             },
             devServer: {},
-            devtool: 'source-map',
+            devtool: 'eval-cheap-source-map',
             output: {
                 path: resolve(__dirname, './dist/client'),
                 filename: 'bundle.js',
                 publicPath: '/',
             },
             plugins: [new HotModuleReplacementPlugin()],
+            module: {
+                rules: [
+                    {
+                        test: /\.js$/,
+                        enforce: 'pre',
+                        use: ['source-map-loader'],
+                    },
+                ],
+            },
+            optimization: {
+                splitChunks: {
+                    chunks: 'all',
+                    filename: 'chunk.[hash].js',
+                },
+            },
         },
         loadPresets(addPresets(env, ['html-plugin', 'babel']))
     )
@@ -39,6 +55,7 @@ function clientConfig(env: Env): ReturnType<PresetFn> {
 function serverConfig(env: Env) {
     return merge<ReturnType<PresetFn>>(
         {
+            name: 'server',
             entry: {
                 main: './src/server/index',
             },
