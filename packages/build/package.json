@@ -26,6 +26,7 @@
     "devDependencies": {
         "@types/babel__core": "^7",
         "@types/express": "^4",
+        "@types/prettier": "^2",
         "@types/webpack-dev-middleware": "^4",
         "@types/webpack-hot-middleware": "^2.25.4",
         "@types/webpack-merge": "^5.0.0",

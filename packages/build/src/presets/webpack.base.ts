@@ -1,7 +1,7 @@
 import { Configuration } from 'webpack'
-import merge from 'webpack-merge'
 
 import { PresetFn } from './types'
+import merge from 'webpack-merge'
 
 export type BasePreset = 'base'
 

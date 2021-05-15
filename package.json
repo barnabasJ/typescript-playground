@@ -1,16 +1,27 @@
 {
-  "name": "ts-starter",
-  "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
-  "devDependencies": {
-    "@barnabasj/eslint-config": "workspace:packages/eslint",
-    "@types/eslint": "^7",
-    "@types/prettier": "^2",
-    "eslint": "^7.26.0",
-    "prettier": "^2.3.0",
-    "stylelint": "^13.13.1",
-    "typescript": "^4.2.4"
-  }
+    "name": "ts-starter",
+    "private": true,
+    "workspaces": [
+        "packages/*"
+    ],
+    "scripts": {
+        "lint": "eslint --debug --config .eslintrc.js $(ls -d packages/* | grep -v eslint)"
+    },
+    "devDependencies": {
+        "@barnabasj/eslint-config": "workspace:packages/eslint",
+        "@types/eslint": "^7",
+        "@types/eslint-plugin-prettier": "^3",
+        "@types/prettier": "^2",
+        "@typescript-eslint/eslint-plugin": "^4.23.0",
+        "@typescript-eslint/parser": "^4.23.0",
+        "eslint": "^7.26.0",
+        "eslint-import-resolver-node": "^0.3.4",
+        "eslint-plugin-import": "^2.23.1",
+        "eslint-plugin-prettier": "^3.4.0",
+        "eslint-plugin-radar": "^0.2.1",
+        "eslint-plugin-react": "^7.23.2",
+        "prettier": "^2.3.0",
+        "stylelint": "^13.13.1",
+        "typescript": "^4.2.4"
+    }
 }

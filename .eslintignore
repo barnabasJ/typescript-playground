@@ -1,0 +1,4 @@
+packages/eslint/*
+**/node_module/*
+**/.yarn/*
+**/dist/*

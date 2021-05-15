@@ -1,1 +1,3 @@
-module.exports = "@barnabasj/eslint-config/prettier";
+module.exports = {
+    extends: '@barnabasj/eslint-config',
+}

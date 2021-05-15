@@ -1,7 +1,6 @@
-import { resolve } from 'path'
-
 import webpackMerge from 'webpack-merge'
 import { map, uniqBy, takeAll, merge, concat } from 'gendash'
+import { resolve } from 'path'
 
 import { Env } from '..'
 import { Presets } from './types'
