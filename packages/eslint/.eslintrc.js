@@ -26,7 +26,10 @@ module.exports = {
     rules: {
         'prettier/prettier': 'error',
         eqeqeq: 'error', // require use of `===` and `!==` @see https://eslint.org/docs/rules/eqeqeq
-        'no-magic-numbers': 'error', // disallow magic numbers @see https://eslint.org/docs/rules/no-magic-numbers
+        'no-magic-numbers': [
+            'error',
+            { ignoreArrayIndexes: true, ignoreDefaultValues: true },
+        ], // disallow magic numbers @see https://eslint.org/docs/rules/no-magic-numbers
         'no-multi-spaces': 'error', // disallow multiple spaces @see https://eslint.org/docs/rules/no-multi-spaces
         'no-implicit-coercion': 'error', // disallow shorthand type conversions @see https://eslint.org/docs/rules/no-implicit-coercion
         'multiline-comment-style': 'error', // enforce a particular style for multiline comments @see https://eslint.org/docs/rules/multiline-comment-style

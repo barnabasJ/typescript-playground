@@ -1,7 +1,8 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+import { resolve } from 'path'
 import webpackMerge from 'webpack-merge'
 import { map, uniqBy, takeAll, merge, concat } from 'gendash'
-import { resolve } from 'path'
-
+import { Configuration } from '../types'
 import { Env } from '..'
 import { Presets } from './types'
 
@@ -14,7 +15,7 @@ import { Presets } from './types'
  * @param env - the environment containing the wanted presets
  * @returns - the merged config from all presets
  */
-export function loadPresets(env: Env) {
+export function loadPresets(env: Env): Configuration {
     const presets = takeAll(
         uniqBy(env.presets, (preset) => {
             if (typeof preset === 'string') {
