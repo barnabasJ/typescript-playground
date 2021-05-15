@@ -33,9 +33,13 @@ module.exports = {
         'no-multi-spaces': 'error', // disallow multiple spaces @see https://eslint.org/docs/rules/no-multi-spaces
         'no-implicit-coercion': 'error', // disallow shorthand type conversions @see https://eslint.org/docs/rules/no-implicit-coercion
         'multiline-comment-style': 'error', // enforce a particular style for multiline comments @see https://eslint.org/docs/rules/multiline-comment-style
-        'multiline-ternary': 'error', // enforce newlines between operands of ternary expressions @see https://eslint.org/docs/rules/multiline-ternary
+        'multiline-ternary': 0, // ATTENTION: doesn't work with prettier | enforce newlines between operands of ternary expressions @see https://eslint.org/docs/rules/multiline-ternary
         'space-unary-ops': 'error', // enforce consistent spacing before and after unary opeartors @see https://eslint.org/docs/rules/space-unary-ops
         'import/order': 'error', // enforce order of import statements @see https://github.com/benmosher/eslint-plugin-import
+        '@typescript-eslint/no-unused-vars': [
+            'error',
+            { argsIgnorePattern: '^_' },
+        ],
     },
     settings: {
         'import/parsers': {

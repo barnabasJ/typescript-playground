@@ -33,7 +33,7 @@ const config: PresetFn = (e) => {
     )
 }
 
-const serverConfig: PresetFn = () => {
+const serverConfig: PresetFn = (_) => {
     return {
         node: {
             __dirname: false,
@@ -42,7 +42,7 @@ const serverConfig: PresetFn = () => {
     }
 }
 
-const clientConfig: PresetFn = () => {
+const clientConfig: PresetFn = (_) => {
     return {
         target: 'web',
     }

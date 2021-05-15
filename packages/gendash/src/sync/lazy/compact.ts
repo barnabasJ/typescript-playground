@@ -1,7 +1,7 @@
 import { filter } from './filter'
 
-export function compact<T>(
-    collection: Iterable<T>
-): Generator<T, void, unknown> {
-    return filter(collection, (e) => Boolean(e))
+type ReturnType<T> = Iterable<Exclude<T, undefined | null | '' | false>>
+
+export function compact<T>(collection: Iterable<T>): ReturnType<T> {
+    return filter(collection, (e) => Boolean(e)) as ReturnType<T>
 }

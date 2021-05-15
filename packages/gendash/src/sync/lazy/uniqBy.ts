@@ -1,6 +1,9 @@
 import { filter } from './filter'
 
-export function uniqBy<T>(collection: Iterable<T>, identifier: (e: T) => any) {
+export function uniqBy<T>(
+    collection: Iterable<T>,
+    identifier: (e: T) => unknown
+): Iterable<T> {
     const seen = new Set()
     return filter(collection, (e) => {
         const id = identifier(e)

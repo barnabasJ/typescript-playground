@@ -5,7 +5,11 @@ export function range(
     end: number,
     step: number
 ): Iterable<number>
-export function* range(startEnd: number, maybeEnd?: number, step = 1) {
+export function* range(
+    startEnd: number,
+    maybeEnd?: number,
+    step = 1
+): Iterable<number> {
     let start = 0
     let end = startEnd
     if (maybeEnd !== undefined) {

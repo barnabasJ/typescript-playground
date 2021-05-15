@@ -9,7 +9,7 @@ import { HTMLPluginPreset } from './webpack.html-plugin'
  * A Preset can either be just the name of the preset or
  * a tuple containing the name and options for the preset
  */
-export type Preset = string | [string, Record<string, any>]
+export type Preset = string | [string, Record<string, unknown>]
 
 export type PresetFn<S = void> = (env: Env, options: S) => Configuration
 

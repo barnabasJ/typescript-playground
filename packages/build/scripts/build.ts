@@ -4,7 +4,6 @@ import express from 'express'
 import webpack from 'webpack'
 import webpackDevMiddleware from 'webpack-dev-middleware'
 import webpackHotMiddleware from 'webpack-hot-middleware'
-import { merge } from 'gendash'
 import { Configuration } from '../src/types'
 import { Env, defaultEnv } from '../src'
 
@@ -23,6 +22,7 @@ const configModule: {
         | Configuration
         | (Configuration[] & { parallelism?: number })
         | ((e: Env) => Configuration | Configuration[])
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
 } = require(resolve(process.cwd(), './webpack.config'))
 
 let config: Configuration | (Configuration[] & { parallelism?: number })
@@ -39,25 +39,17 @@ const compiler = webpack(config)
 
 const server = express()
 
-const devServerConfig = Array.isArray(config)
-    ? config.map((c) => c.devServer).reduce((acc, c) => merge(acc, c))
-    : config.devServer
-
-console.log({ devServerConfig })
-
 server.use(
     webpackDevMiddleware(compiler, {
         writeToDisk: true,
     })
 )
 server.use(
-    webpackHotMiddleware(
-        compiler as unknown as Parameters<typeof webpackHotMiddleware>[0],
-        {
-            log: (...args) => console.log(args),
-            path: '/__webpack_hmr',
-        }
-    )
+    // @ts-expect-error the middleware has a different type for the compiler than webpack itself
+    webpackHotMiddleware(compiler, {
+        log: (...args) => console.log(args),
+        path: '/__webpack_hmr',
+    })
 )
 
 const staticMiddleWare = express.static('dist/client')
@@ -66,7 +58,9 @@ server.use(staticMiddleWare)
 
 // server.get('/', (_req, res) => res.render('index'))
 
-server.listen(8080, () => {
+const port = 8080
+
+server.listen(port, () => {
     console.log('Server is listening on port 8080')
 })
 

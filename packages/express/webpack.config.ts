@@ -10,7 +10,7 @@ import {
 } from '@barnabasj/build'
 import { HotModuleReplacementPlugin } from 'webpack'
 
-export default function (env: Env) {
+export default function (env: Env): Configuration[] {
     return [clientConfig(env), merge({}, serverConfig(env))]
 }
 

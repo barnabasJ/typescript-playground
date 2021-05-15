@@ -2,7 +2,7 @@ import { merge, map, takeAll, compact, concat } from 'gendash'
 
 import { Configuration } from './types'
 import { Presets } from './presets/types'
-import loadPresets from './presets'
+import { loadPresets } from './presets'
 
 /**
  * The environment
