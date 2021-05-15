@@ -1,12 +1,12 @@
+import { resolve } from 'path'
 import { Command } from 'commander'
 import express from 'express'
-import { resolve } from 'path'
 import webpack from 'webpack'
-import { Configuration } from '../src/types'
 import webpackDevMiddleware from 'webpack-dev-middleware'
 import webpackHotMiddleware from 'webpack-hot-middleware'
-import { Env, defaultEnv } from '../src'
 import { merge } from 'gendash'
+import { Configuration } from '../src/types'
+import { Env, defaultEnv } from '../src'
 
 const program = new Command()
 

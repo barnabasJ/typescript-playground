@@ -55,7 +55,7 @@ function config(
                 )
             )
         ),
-        watch: !!args.watch,
+        watch: Boolean(args.watch),
     })
 
     return loadPresets(env)
