@@ -25,7 +25,6 @@ function clientConfig(env: Env): ReturnType<PresetFn> {
                     './src/client/index',
                 ],
             },
-            devServer: {},
             devtool: 'eval',
             output: {
                 path: resolve(__dirname, './dist/client'),
