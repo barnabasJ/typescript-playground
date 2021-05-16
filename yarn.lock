@@ -1272,6 +1272,27 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@barnabasj/app@workspace:packages/app":
+  version: 0.0.0-use.local
+  resolution: "@barnabasj/app@workspace:packages/app"
+  dependencies:
+    "@babel/core": ^7.14.2
+    "@barnabasj/build": "workspace:packages/build"
+    "@types/babel__core": ^7
+    "@types/node": ^15.0.3
+    "@types/webpack-dev-middleware": ^4
+    "@types/webpack-hot-middleware": ^2.25.4
+    babel-loader: ^8.2.2
+    pnp-webpack-plugin: ^1.6.4
+    source-map-loader: ^2.0.1
+    ts-node-dev: ^1.1.6
+    typescript: ^4.2.4
+    webpack: ^5.37.0
+    webpack-dev-middleware: ^4.2.0
+    webpack-hot-middleware: ^2.25.0
+  languageName: unknown
+  linkType: soft
+
 "@barnabasj/build@workspace:packages/build":
   version: 0.0.0-use.local
   resolution: "@barnabasj/build@workspace:packages/build"
@@ -1329,27 +1350,6 @@ __metadata:
     eslint-plugin-radar: ^0.2.1
     eslint-plugin-react: ^7.23.2
     prettier: ^2.3.0
-  languageName: unknown
-  linkType: soft
-
-"@barnabasj/express@workspace:packages/app":
-  version: 0.0.0-use.local
-  resolution: "@barnabasj/express@workspace:packages/app"
-  dependencies:
-    "@babel/core": ^7.14.2
-    "@barnabasj/build": "workspace:packages/build"
-    "@types/babel__core": ^7
-    "@types/node": ^15.0.3
-    "@types/webpack-dev-middleware": ^4
-    "@types/webpack-hot-middleware": ^2.25.4
-    babel-loader: ^8.2.2
-    pnp-webpack-plugin: ^1.6.4
-    source-map-loader: ^2.0.1
-    ts-node-dev: ^1.1.6
-    typescript: ^4.2.4
-    webpack: ^5.37.0
-    webpack-dev-middleware: ^4.2.0
-    webpack-hot-middleware: ^2.25.0
   languageName: unknown
   linkType: soft
 
@@ -1966,13 +1966,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/prop-types@npm:*":
-  version: 15.7.3
-  resolution: "@types/prop-types@npm:15.7.3"
-  checksum: bd0eab69d5120ad3784d0c9985f902653d5924707a7f2b3702a330e762dfd61b6494954cb54ad0c52b918ffd6f1e7e27c9270e4442bc15250de348596f2f60cb
-  languageName: node
-  linkType: hard
-
 "@types/qs@npm:*":
   version: 6.9.6
   resolution: "@types/qs@npm:6.9.6"
@@ -1984,24 +1977,6 @@ __metadata:
   version: 1.2.3
   resolution: "@types/range-parser@npm:1.2.3"
   checksum: 092fabae0ecbd728d3e4debc938cd043e97cb9f210cfec1c56ff6065c6e91666f376eb586591825d6757a058fd1a1dc4831d34e04ecfbb0800f35b8d86d38635
-  languageName: node
-  linkType: hard
-
-"@types/react@npm:^17":
-  version: 17.0.5
-  resolution: "@types/react@npm:17.0.5"
-  dependencies:
-    "@types/prop-types": "*"
-    "@types/scheduler": "*"
-    csstype: ^3.0.2
-  checksum: f9793e8113f14122d6ed20643b4fe27d30e10d7c80571a1d238c13f8171864f2a7b337194bf41310724498586ed4560fffd081a2d21e488afbb1aca33534189b
-  languageName: node
-  linkType: hard
-
-"@types/scheduler@npm:*":
-  version: 0.16.1
-  resolution: "@types/scheduler@npm:0.16.1"
-  checksum: 0124c2e4dee5e9b8c8524fcd6b1b8ea0b807b132e593925db04cdcc92ca2779a0d27c79414e60454b4458361a4d8319fa2b59d20585054f21617d1e9acf46a6f
   languageName: node
   linkType: hard
 
@@ -2131,17 +2106,6 @@ __metadata:
     "@types/webpack-sources": "*"
     source-map: ^0.6.0
   checksum: 0edd48873e23e3f9290721596ad3a553495d16e906a8ee81d03dca1453a15a10ca90a71fc1b8a056ef97fa861ae36c69f9df880f3c69b1ec728fbb40fae7026f
-  languageName: node
-  linkType: hard
-
-"@types/webpack@npm:^5.28.0":
-  version: 5.28.0
-  resolution: "@types/webpack@npm:5.28.0"
-  dependencies:
-    "@types/node": "*"
-    tapable: ^2.2.0
-    webpack: ^5
-  checksum: c09222b73def3ebec8a111f3382499a70370d58fb05de6a0eb81836e0b291b198b8a3cf368dd0b2849db1769c2fac1920155e138ebe058eb687c1f2849be8504
   languageName: node
   linkType: hard
 
@@ -3415,18 +3379,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"client@workspace:packages/client":
-  version: 0.0.0-use.local
-  resolution: "client@workspace:packages/client"
-  dependencies:
-    "@barnabasj/build": "workspace:packages/build"
-    "@types/react": ^17
-    "@types/webpack": ^5.28.0
-    react: ^17.0.2
-    webpack: ^5.37.0
-  languageName: unknown
-  linkType: soft
-
 "cliui@npm:^6.0.0":
   version: 6.0.0
   resolution: "cliui@npm:6.0.0"
@@ -3751,13 +3703,6 @@ __metadata:
   dependencies:
     cssom: ~0.3.6
   checksum: a778180d2f5eef44742b7083997a0ad6e59eee016724ceac4d6229e48842d3c5ebbb55dc02c555f793bdc486254f6eef8d2049c1815e8fc74514e3eb827d49ec
-  languageName: node
-  linkType: hard
-
-"csstype@npm:^3.0.2":
-  version: 3.0.8
-  resolution: "csstype@npm:3.0.8"
-  checksum: e15233592a2c580fd72c4346a5c921044b8f4f29bcb81628a81199c4d6a91eb8f8e4875f440ef9c990e85f179a3370f3b842fe55e4743119ad0ce712519e7123
   languageName: node
   linkType: hard
 
@@ -6987,7 +6932,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"loose-envify@npm:^1.1.0, loose-envify@npm:^1.4.0":
+"loose-envify@npm:^1.4.0":
   version: 1.4.0
   resolution: "loose-envify@npm:1.4.0"
   dependencies:
@@ -8562,16 +8507,6 @@ __metadata:
   version: 17.0.2
   resolution: "react-is@npm:17.0.2"
   checksum: 3eff23f410d40ab9bc5177f147a92c7f42c356a21ecea340e0554566956d67e5e1ba56f26cc7fa22339ac3c7151744177bd6305eaa26d3cbf15f354358c9d9b6
-  languageName: node
-  linkType: hard
-
-"react@npm:^17.0.2":
-  version: 17.0.2
-  resolution: "react@npm:17.0.2"
-  dependencies:
-    loose-envify: ^1.1.0
-    object-assign: ^4.1.1
-  checksum: 7d0dfebafe1d297503157abb2e9acdb49852185deb8700c16f4a6faad87642f84903ab18cfc16f40b9a0dfe97540f99834982ee953e6d48b39c41608dc3e4b29
   languageName: node
   linkType: hard
 

@@ -1,5 +1,5 @@
 {
-    "name": "@barnabasj/express",
+    "name": "@barnabasj/app",
     "scripts": {
         "build": "ts-node-dev -- @barnabasj/build/scripts/build.ts "
     },
