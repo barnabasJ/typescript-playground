@@ -5,7 +5,10 @@
         "packages/*"
     ],
     "scripts": {
-        "lint": "eslint $(ls -d packages/* | grep -v eslint)"
+        "lint": "eslint $(ls -d packages/* | grep -v eslint)",
+        "build": "yarn workspace @barnabasj/config build",
+        "pretest": "yarn build",
+        "test": "jest"
     },
     "devDependencies": {
         "@babel/core": "^7.14.2",
